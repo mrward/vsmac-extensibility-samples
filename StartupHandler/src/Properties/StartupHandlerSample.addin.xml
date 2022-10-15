@@ -1,0 +1,9 @@
+﻿<ExtensionModel>
+  <Runtime>
+    <Import assembly="StartupHandlerSample.dll" />
+  </Runtime>
+
+  <Extension path="/MonoDevelop/Ide/StartupHandlers">
+    <Class class="StartupHandlerSample.StartupHandler" />
+  </Extension>
+</ExtensionModel>
