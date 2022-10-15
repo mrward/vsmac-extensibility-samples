@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudioMac.Sdk" Version="17.0.0" />
+    <PackageReference Include="Microsoft.VisualStudioMac.Sdk" Version="$(VisualStudioMacSdkNuGetVersion)" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\StartupHandlerSample.addin.xml">
