@@ -1,0 +1,36 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Microsoft",
+  "classifications": [],
+  "description": "",
+  "name": "Sample Extension",
+  "defaultName": "SampleExtensionProjectTemplate",
+  "identity": "Microsoft.SampleExtensionProjectTemplate.CSharp",
+  "groupIdentity": "Microsoft.SampleExtensionProjectTemplate",
+  "tags": {
+    "language": "C#",
+    "type": "project",
+    "vsmac-category": "extensions/custom/general"
+  },
+  "shortName": "SampleExtensionProjectTemplate",
+  "sourceName": "SampleExtensionProjectTemplate",
+  "guids": [
+    "{DF3BF5FF-02F0-4C1C-BCC9-DA35CE88FAD7}"
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".vs/**/*"
+          ]
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "SampleExtensionProjectTemplate.csproj"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Microsoft.SampleExtensionProjectTemplate.CSharp</id>
+    <version>1.0.0</version>
+    <title>Microsoft.SampleExtensionProjectTemplate</title>
+    <authors>Microsoft</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <description>Microsoft.SampleExtensionProjectTemplate.CSharp</description>
+    <copyright>Microsoft</copyright>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src=".template.config/template.json" target="content/.template.config/" />
+    <file src="SampleExtensionProjectTemplate.csproj" target="content" />
+    <file src="Properties/*.*" target="content/Properties/" />
+  </files>
+</package>

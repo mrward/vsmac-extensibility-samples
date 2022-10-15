@@ -1,0 +1,6 @@
+﻿<ExtensionModel>
+  <Runtime>
+    <Import assembly="SampleExtensionProjectTemplate.dll" />
+  </Runtime>
+
+</ExtensionModel>

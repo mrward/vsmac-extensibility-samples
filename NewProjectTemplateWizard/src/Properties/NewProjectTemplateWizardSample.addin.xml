@@ -1,0 +1,30 @@
+﻿<ExtensionModel>
+  <Runtime>
+    <Import assembly="NewProjectTemplateWizardSample.dll" />
+  </Runtime>
+
+  <Extension path="/MonoDevelop/Ide/ProjectTemplateCategories">
+    <Category id="extensions" _name="Extensions" insertafter="other">
+      <Category id="custom" _name="Custom">
+        <Category id="general" _name="General" />
+      </Category>
+    </Category>
+  </Extension>
+
+  <Extension path= "/MonoDevelop/Ide/Templates">
+    <Template
+      _overrideName="Sample Extension"
+      id="Microsoft.SampleExtensionProjectTemplate.CSharp"
+      templateId="Microsoft.SampleExtensionProjectTemplate.CSharp"
+      groupId="Microsoft.SampleExtensionProjectTemplate"
+      path="templates/Microsoft.SampleExtensionProjectTemplate.CSharp.1.0.0.nupkg"
+      wizard="NewProjectTemplateWizardSample.SampleProjectTemplateWizard"
+      category="extensions/custom/general" />
+  </Extension>
+
+  <Extension path="/MonoDevelop/Ide/ProjectTemplateWizards">
+    <Class
+      id="NewProjectTemplateWizardSample.SampleProjectTemplateWizard"
+      class="NewProjectTemplateWizardSample.SampleProjectTemplateWizard" />
+  </Extension>
+</ExtensionModel>
