@@ -1,0 +1,21 @@
+﻿<ExtensionModel>
+  <Runtime>
+    <Import assembly="SelectTemplateInNewProjectDialogSample.dll" />
+  </Runtime>
+
+  <Extension path="/MonoDevelop/Ide/Commands">
+    <Category _name="SelectTemplateInNewProjectDialogSample" id="SelectTemplateInNewProjectDialogSample">
+      <Command
+        id="SelectTemplateInNewProjectDialogSample.Commands.NewXUnitProject"
+        _description="Open xUnit project in New Project dialog"
+        _label="New xUnit Project…"
+        defaultHandler="SelectTemplateInNewProjectDialogSample.NewXUnitProjectHandler" />
+    </Category>
+  </Extension>
+
+  <Extension path="/MonoDevelop/Ide/MainMenu/File">
+    <CommandItem
+       id="SelectTemplateInNewProjectDialogSample.Commands.NewXUnitProject"
+       insertafter="MonoDevelop.Ide.Commands.FileCommands.NewProject" />
+  </Extension>
+</ExtensionModel>
