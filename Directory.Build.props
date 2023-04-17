@@ -1,5 +1,5 @@
 <Project>
   <PropertyGroup>
-    <VisualStudioMacSdkNuGetVersion>17.0.0</VisualStudioMacSdkNuGetVersion>
+    <VisualStudioMacSdkNuGetVersion>17.5.0</VisualStudioMacSdkNuGetVersion>
   </PropertyGroup>
 </Project>
