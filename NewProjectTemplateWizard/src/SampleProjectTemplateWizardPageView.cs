@@ -8,6 +8,7 @@ namespace NewProjectTemplateWizardSample;
 class SampleProjectTemplateWizardPageView : NSView
 {
     NSTextField projectNameTextField;
+    NSScrollView scrollView;
 
     public override bool IsFlipped => true;
 
@@ -23,6 +24,9 @@ class SampleProjectTemplateWizardPageView : NSView
         mainStackView.TranslatesAutoresizingMaskIntoConstraints = false;
 
         AddSubview(mainStackView);
+
+        mainStackView.TopAnchor.ConstraintEqualTo(TopAnchor).Active = true;
+        mainStackView.BottomAnchor.ConstraintEqualTo(BottomAnchor).Active = true;
 
         var projectNameStackView = new NSStackView();
         projectNameStackView.Spacing = 20;
@@ -47,6 +51,34 @@ class SampleProjectTemplateWizardPageView : NSView
         projectNameTextField.WidthAnchor.ConstraintEqualTo(248f).Active = true;
 
         projectNameTextField.Changed += ProjectNameTextField_Changed;
+
+        scrollView = new NSScrollView();
+        scrollView.AutoresizingMask = NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
+        scrollView.HasVerticalScroller = true;
+
+        var checkboxStackView = new NSStackView();
+        checkboxStackView.Orientation = NSUserInterfaceLayoutOrientation.Vertical;
+        checkboxStackView.TranslatesAutoresizingMaskIntoConstraints = false;
+        scrollView.DocumentView = checkboxStackView;;
+
+        mainStackView.AddArrangedSubview(scrollView);
+
+        scrollView.TopAnchor.ConstraintEqualTo(projectNameStackView.BottomAnchor, 10).Active = true;
+        scrollView.BottomAnchor.ConstraintEqualTo(mainStackView.BottomAnchor).Active = true;
+
+        AddCheckBoxes(checkboxStackView);
+    }
+
+    void AddCheckBoxes(NSStackView stackView)
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            var checkbox = new NSButton();
+            checkbox.Title = $"Button {i}";
+            checkbox.SetButtonType(NSButtonType.Switch);
+
+            stackView.AddArrangedSubview(checkbox);
+        }
     }
 
     void ProjectNameTextField_Changed(object? sender, EventArgs e)
